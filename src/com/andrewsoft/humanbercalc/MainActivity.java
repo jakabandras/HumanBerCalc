@@ -3,6 +3,7 @@ package com.andrewsoft.humanbercalc;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,10 +14,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.*;
 
-@SuppressWarnings({ "unused", "deprecation" })
+
+@SuppressLint("SimpleDateFormat") @SuppressWarnings({ "unused", "deprecation" })
 public class MainActivity extends ActionBarActivity implements ActionBar.OnNavigationListener {
 
     /**
@@ -29,6 +34,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
 
         // Set up the action bar to show a dropdown list.
         final ActionBar actionBar = getSupportActionBar();
@@ -49,6 +55,8 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
                         }),
                 this);
     }
+    
+   // protected void onCreateView
 
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -80,6 +88,11 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        switch (id) {
+        case R.id.action_exit:
+        	finish();
+        }
+        
         if (id == R.id.action_settings) {
             return true;
         }
@@ -115,6 +128,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
+            // fragment.
             return fragment;
         }
 
@@ -124,7 +138,22 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        	Bundle args = this.getArguments();
+        	int sec = args.getInt(ARG_SECTION_NUMBER, 1);
+        	int[] frags =  {R.layout.fragment_main,R.layout.fragment_other,R.layout.fragment_summary}; 
+            View rootView = inflater.inflate(frags[sec-1], container, false);
+            switch (sec)
+            {
+            case 1:
+                Date dt = new Date();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMMM dd");
+                TextView tv = (TextView) rootView.findViewById(R.id.textDatum);
+                tv.setText(sdf.format(dt).toString());
+                Button but = (Button) rootView.findViewById(R.id.btnMonth);
+                sdf = new SimpleDateFormat("MMM");
+                but.setText(sdf.format(dt));
+            	
+            }
             return rootView;
         }
     }

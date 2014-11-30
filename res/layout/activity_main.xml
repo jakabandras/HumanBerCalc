@@ -3,6 +3,17 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     tools:context="com.andrewsoft.humanbercalc.MainActivity"
-    tools:ignore="MergeRootFrame" />
+    tools:ignore="MergeRootFrame" >
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true" >
+
+    </ViewSwitcher>
+
+</FrameLayout>
 
