@@ -12,10 +12,12 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -150,8 +152,16 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
                 TextView tv = (TextView) rootView.findViewById(R.id.textDatum);
                 tv.setText(sdf.format(dt).toString());
                 Button but = (Button) rootView.findViewById(R.id.btnMonth);
-                sdf = new SimpleDateFormat("MMM");
+                sdf = new SimpleDateFormat("MMMM");
                 but.setText(sdf.format(dt));
+                but.setOnClickListener(new OnClickListener() {
+                  @Override
+                  public void onClick( View v )
+                  {
+                    // TODO Auto-generated method stub
+                    Toast.makeText(getActivity(), "Megnyomtad a gombot",Toast.LENGTH_SHORT).show();
+                  }
+                });
             	
             }
             return rootView;
