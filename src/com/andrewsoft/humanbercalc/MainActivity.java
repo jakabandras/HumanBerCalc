@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +33,8 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
      * current dropdown position.
      */
     private static final String STATE_SELECTED_NAVIGATION_ITEM = "selected_navigation_item";
+    
+    static AlertDialog AlertDialogStores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +114,28 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
                 .commit();
         return true;
     }
+    
+    public static void ShowPopUp(Context context)
+    {
+      Date dt = new Date();
+      SimpleDateFormat sdf = new SimpleDateFormat("MMMM");
+      ObjectItem[] items = new ObjectItem[12];
+      
+      for(int i=1;i<12;i++ )
+      {
+        dt.setMonth(i);
+        items[i] = new ObjectItem(i,sdf.format(dt));
+      }
+      ArrayAdapterItem adapter = new ArrayAdapterItem(context, R.layout.list_view_row_item, items);
+      ListView lv = new ListView(context);
+      lv.setAdapter(adapter);
+      lv.setOnItemClickListener(new OnItemClickListenerListViewItem());
+      
+      AlertDialogStores = new AlertDialog.Builder(context)
+        .setView(lv)
+        .setTitle("Hónap kiválasztása")
+        .show();
+    }
 
     /**
      * A placeholder fragment containing a simple view.
@@ -160,6 +186,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
                   {
                     // TODO Auto-generated method stub
                     Toast.makeText(getActivity(), "Megnyomtad a gombot",Toast.LENGTH_SHORT).show();
+                    ShowPopUp(getActivity());
                   }
                 });
             	

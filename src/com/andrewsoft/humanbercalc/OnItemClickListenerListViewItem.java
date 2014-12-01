@@ -2,6 +2,7 @@ package com.andrewsoft.humanbercalc;
 
 import android.content.Context;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
@@ -11,7 +12,7 @@ import android.widget.Toast;
  * Here you can control what to do next when the user selects an item
  */
 @SuppressWarnings("unused")
-public class OnItemClickListenerListViewItem implements OnItemClickListener {
+public class OnItemClickListenerListViewItem implements OnItemClickListener, OnClickListener {
 
 	@Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -32,5 +33,12 @@ public class OnItemClickListenerListViewItem implements OnItemClickListener {
         ((MainActivity) context).alertDialogStores.cancel();
 */        
     }
+
+  @Override
+  public void onClick( View v )
+  {
+    // TODO Auto-generated method stub
+    
+  }
 	
 }
