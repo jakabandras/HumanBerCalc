@@ -7,5 +7,19 @@
     <string name="title_section3">Section 3</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="mnuExit">Kilépés</string>
+    <string name="txtHavOssz">Havi összesítés</string>
+    <string name="txt8de">8 óra délelőtt :</string>
+    <string name="txt8du">8 óra délután :</string>
+    <string name="txt8ej">8 óra éjszaka :</string>
+    <string name="txt8szo">8 óra szombaton :</string>
+    <string name="txt8va">8 óra vasárnap :</string>
+    <string name="txt12na">12 óra nappal :</string>
+    <string name="txt12ej">12 óra éjszaka :</string>
+    <string name="txt12szo">12 óra szombaton :</string>
+    <string name="txt12Va">12 óra vasárnap :</string>
+    <string name="txtSzab">Szabadság :</string>
+    <string name="txtFizUnn">Fizetett ünnep :</string>
+    <string name="txtAktHonap">Aktuális hónap :</string>
 
 </resources>

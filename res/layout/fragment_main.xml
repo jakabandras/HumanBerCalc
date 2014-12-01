@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:paddingBottom="15dp"
-            android:text="Havi összesítés"
+            android:text="@string/txtHavOssz"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <LinearLayout
@@ -52,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="8 óra délelőtt :"
+                    android:text="@string/txt8de"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -72,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="8 óra délután :"
+                    android:text="@string/txt8du"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -92,7 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="8 óra éjszaka :"
+                    android:text="@string/txt8ej"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -113,7 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="8 óra szombaton :"
+                    android:text="@string/txt8szo"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -133,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="8 óra vasárnap :"
+                    android:text="@string/txt8va"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -158,7 +158,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="12 óra nappal :"
+                    android:text="@string/txt12na"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -178,7 +178,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="12 óra éjszaka :"
+                    android:text="@string/txt12ej"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -198,7 +198,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="12 óra szombaton :"
+                    android:text="@string/txt12szo"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -218,7 +218,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="12 óra vasárnap :"
+                    android:text="@string/txt12Va"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -243,7 +243,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="Szabadság :"
+                    android:text="@string/txtSzab"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -263,7 +263,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="Fizetett ünnep :"
+                    android:text="@string/txtFizUnn"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -288,7 +288,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingRight="15dp"
-                    android:text="Aktuális hónap :"
+                    android:text="@string/txtAktHonap"
                     android:textAllCaps="false"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
