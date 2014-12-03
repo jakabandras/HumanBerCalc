@@ -12,14 +12,14 @@ import android.widget.Toast;
  * Here you can control what to do next when the user selects an item
  */
 @SuppressWarnings("unused")
-public class OnItemClickListenerListViewItem implements OnItemClickListener, OnClickListener {
+public class OnItemClickListenerListViewItem implements OnItemClickListener {
 
 	@Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 		Context context = view.getContext();
 		
-/*		TextView textViewItem = ((TextView) view.findViewById(R.id.textViewItem));
+		TextView textViewItem = ((TextView) view.findViewById(R.id.textViewItem));
 		
         // get the clicked item name
         String listItemText = textViewItem.getText().toString();
@@ -30,15 +30,13 @@ public class OnItemClickListenerListViewItem implements OnItemClickListener, OnC
         // just toast it
         Toast.makeText(context, "Item: " + listItemText + ", Item ID: " + listItemId, Toast.LENGTH_SHORT).show();
 
-        ((MainActivity) context).alertDialogStores.cancel();
-*/        
+        MainActivity.AlertDialogStores.cancel();
+        ((MainActivity)context).actMonth = Integer.parseInt(listItemId);
+        MyEventClass mEvent = new MyEventClass(context);
+        parent.g
+        
+        
     }
 
-  @Override
-  public void onClick( View v )
-  {
-    // TODO Auto-generated method stub
-    
-  }
 	
 }

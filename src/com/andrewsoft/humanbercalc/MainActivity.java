@@ -35,12 +35,15 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
     private static final String STATE_SELECTED_NAVIGATION_ITEM = "selected_navigation_item";
     
     static AlertDialog AlertDialogStores;
+    int actMonth;
+    View rv1 = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+        Date dt = new Date();
+        actMonth = dt.getMonth();
 
         // Set up the action bar to show a dropdown list.
         final ActionBar actionBar = getSupportActionBar();
@@ -79,6 +82,15 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
         outState.putInt(STATE_SELECTED_NAVIGATION_ITEM,
                 getSupportActionBar().getSelectedNavigationIndex());
     }
+    
+    public void SetButtonMonth()
+    {
+      int month = actMonth;
+      String monthName = data[month].itemName;
+      Button but = (Button)((MainActivity)mContext).rv1.findViewById(R.id.btnMonth);
+      but.setText(monthName);
+    }
+
 
 
     @Override
@@ -121,7 +133,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
       SimpleDateFormat sdf = new SimpleDateFormat("MMMM");
       ObjectItem[] items = new ObjectItem[12];
       
-      for(int i=1;i<12;i++ )
+      for(int i=0;i<12;i++ )
       {
         dt.setMonth(i);
         items[i] = new ObjectItem(i,sdf.format(dt));
@@ -170,9 +182,11 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
         	int sec = args.getInt(ARG_SECTION_NUMBER, 1);
         	int[] frags =  {R.layout.fragment_main,R.layout.fragment_other,R.layout.fragment_summary}; 
             View rootView = inflater.inflate(frags[sec-1], container, false);
+            
             switch (sec)
             {
             case 1:
+                ((MainActivity)getActivity()).rv1 = rootView;
                 Date dt = new Date();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMMM dd");
                 TextView tv = (TextView) rootView.findViewById(R.id.textDatum);
@@ -185,7 +199,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
                   public void onClick( View v )
                   {
                     // TODO Auto-generated method stub
-                    Toast.makeText(getActivity(), "Megnyomtad a gombot",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getActivity(), "Megnyomtad a gombot",Toast.LENGTH_SHORT).show();
                     ShowPopUp(getActivity());
                   }
                 });
