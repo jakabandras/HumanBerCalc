@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,8 +34,9 @@ public class OnItemClickListenerListViewItem implements OnItemClickListener {
         MainActivity.AlertDialogStores.cancel();
         ((MainActivity)context).actMonth = Integer.parseInt(listItemId);
         MyEventClass mEvent = new MyEventClass(context);
-        parent.g
-        
+        View rv = ((MainActivity)context).rv1;
+        Button bt = (Button) rv.findViewById(R.id.btnMonth);
+        bt.setText(listItemText);
         
     }
 

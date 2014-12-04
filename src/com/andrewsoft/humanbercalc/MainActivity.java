@@ -83,13 +83,6 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
                 getSupportActionBar().getSelectedNavigationIndex());
     }
     
-    public void SetButtonMonth()
-    {
-      int month = actMonth;
-      String monthName = data[month].itemName;
-      Button but = (Button)((MainActivity)mContext).rv1.findViewById(R.id.btnMonth);
-      but.setText(monthName);
-    }
 
 
 
