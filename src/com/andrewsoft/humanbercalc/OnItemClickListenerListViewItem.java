@@ -29,15 +29,18 @@ public class OnItemClickListenerListViewItem implements OnItemClickListener {
         String listItemId = textViewItem.getTag().toString();
         
         // just toast it
-        Toast.makeText(context, "Item: " + listItemText + ", Item ID: " + listItemId, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "Item: " + listItemText + ", Item ID: " + listItemId, Toast.LENGTH_SHORT).show();
 
         MainActivity.AlertDialogStores.cancel();
         ((MainActivity)context).actMonth = Integer.parseInt(listItemId);
         MyEventClass mEvent = new MyEventClass(context);
+        ((MainActivity)context).actEvents = mEvent;
+        
         View rv = ((MainActivity)context).rv1;
         Button bt = (Button) rv.findViewById(R.id.btnMonth);
         bt.setText(listItemText);
         
+        ((MainActivity)context).SetWorkTimeText();
     }
 
 	

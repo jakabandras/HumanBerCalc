@@ -32,6 +32,7 @@ public class MyEventClass
   private Uri calendar_uri = Calendars.CONTENT_URI;
   private Uri event_uri = Events.CONTENT_URI;
   private Context mContext;
+  
   /**
    * 
    */
@@ -66,7 +67,9 @@ public class MyEventClass
           ttl.matches("12 óra nappal") |
           ttl.matches("8 óra délelõtt") |
           ttl.matches("8 óra délután") |
-          ttl.matches("8 óra éjszaka")
+          ttl.matches("8 óra éjszaka") |
+          ttl.matches("Szabadság") |
+          ttl.matches("Fiz.ünn.")
           )
       {
         MyEventInstance mEvent = new MyEventInstance();

@@ -38,6 +38,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
     int actMonth;
     View rv1 = null;
     WorkTime wt;
+    MyEventClass actEvents;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
         setContentView(R.layout.activity_main);
         Date dt = new Date();
         actMonth = dt.getMonth();
+        actEvents = new MyEventClass(this);
 
         // Set up the action bar to show a dropdown list.
         final ActionBar actionBar = getSupportActionBar();
@@ -142,6 +144,81 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
         .setView(lv)
         .setTitle("Hónap kiválasztása")
         .show();
+    }
+    
+    private int Hetvege(long dt)
+    {
+      return 1;
+    }
+    
+    public void SetWorkTimeText()
+    {
+      ArrayList<MyEventInstance> events = actEvents.GetMonthEvents(actMonth);
+      for (int i=0;(i<events.size());i++)
+      {
+        MyEventInstance aEvent = events.get(i);
+        switch (aEvent.Title)
+        {
+        case "8 óra délelõtt":
+          if ( Hetvege(aEvent.stDate) == 1) // Hétköznap
+          {
+            wt.work_8_de = wt.work_8_de + 1;
+          } else if (Hetvege(aEvent.stDate) == 2) //Szombat
+          {
+            wt.work_8_szo = wt.work_8_szo + 1;
+          } else
+            wt.work_8_va = wt.work_8_va +1;
+          break;
+        case "8 óra délután":
+          if ( Hetvege(aEvent.stDate) == 1) // Hétköznap
+          {
+            wt.work_8_du = wt.work_8_du + 1;
+          } else if (Hetvege(aEvent.stDate) == 2) //Szombat
+          {
+            wt.work_8_szo = wt.work_8_szo + 1;
+          } else
+            wt.work_8_va = wt.work_8_va +1;
+          break;
+        case "8 óra éjszaka":
+          if ( Hetvege(aEvent.stDate) == 1) // Hétköznap
+          {
+            wt.work_8_ej = wt.work_8_ej + 1;
+          } else if (Hetvege(aEvent.stDate) == 2) //Szombat
+          {
+            wt.work_8_szo = wt.work_8_szo + 1;
+          } else
+            wt.work_8_va = wt.work_8_va +1;
+          break;
+        case "12 óra nappal":
+          if ( Hetvege(aEvent.stDate) == 1) // Hétköznap
+          {
+            wt.work_12_na = wt.work_12_na + 1;
+          } else if (Hetvege(aEvent.stDate) == 2) //Szombat
+          {
+            wt.work_12_szo = wt.work_12_szo + 1;
+          } else
+            wt.work_12_va = wt.work_12_va +1;
+          break;
+        case "12 óra éjszaka":
+          if ( Hetvege(aEvent.stDate) == 1) // Hétköznap
+          {
+            wt.work_12_ej = wt.work_12_ej + 1;
+          } else if (Hetvege(aEvent.stDate) == 2) //Szombat
+          {
+            wt.work_12_szo = wt.work_12_szo + 1;
+          } else
+            wt.work_12_va = wt.work_12_va +1;
+          break;
+        case "Szabadság":
+            wt.work_szabi = wt.work_szabi + 1;
+            break;
+        case "Fiz.ünn." :
+          wt.work_fiz_unn = wt.work_fiz_unn + 1;
+          break;
+        }
+      }
+      
+      //TextView tv = rv1.findViewById(R.id.)
     }
 
     /**
