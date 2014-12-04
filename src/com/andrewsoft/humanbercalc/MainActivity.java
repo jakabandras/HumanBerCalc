@@ -37,10 +37,12 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
     static AlertDialog AlertDialogStores;
     int actMonth;
     View rv1 = null;
+    WorkTime wt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        wt = new WorkTime();
         setContentView(R.layout.activity_main);
         Date dt = new Date();
         actMonth = dt.getMonth();
