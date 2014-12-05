@@ -218,7 +218,28 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
         }
       }
       
-      //TextView tv = rv1.findViewById(R.id.)
+      TextView tv = (TextView) rv1.findViewById(R.id.txt8de);
+      tv.setText(((Integer)wt.work_8_de).toString());
+      tv = (TextView) rv1.findViewById(R.id.txt8du);
+      tv.setText(((Integer)wt.work_8_du).toString());
+      tv = (TextView) rv1.findViewById(R.id.txt8ej);
+      tv.setText(((Integer)wt.work_8_ej).toString());
+      tv = (TextView) rv1.findViewById(R.id.txt8szo);
+      tv.setText(((Integer)wt.work_8_szo).toString());
+      tv = (TextView) rv1.findViewById(R.id.txt8va);
+      tv.setText(((Integer)wt.work_8_va).toString());
+      tv = (TextView) rv1.findViewById(R.id.txt12na);
+      tv.setText(((Integer)wt.work_12_na).toString());
+      tv = (TextView) rv1.findViewById(R.id.txt12ej);
+      tv.setText(((Integer)wt.work_12_ej).toString());
+      tv = (TextView) rv1.findViewById(R.id.txt12szo);
+      tv.setText(((Integer)wt.work_12_szo).toString());
+      tv = (TextView) rv1.findViewById(R.id.txt12va);
+      tv.setText(((Integer)wt.work_12_va).toString());
+      tv = (TextView) rv1.findViewById(R.id.txtSzabi);
+      tv.setText(((Integer)wt.work_szabi).toString());
+      tv = (TextView) rv1.findViewById(R.id.txtFizUnn);
+      tv.setText(((Integer)wt.work_fiz_unn).toString());
     }
 
     /**
@@ -263,6 +284,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMMM dd");
                 TextView tv = (TextView) rootView.findViewById(R.id.textDatum);
                 tv.setText(sdf.format(dt).toString());
+                ((MainActivity)getActivity()).SetWorkTimeText();
                 Button but = (Button) rootView.findViewById(R.id.btnMonth);
                 sdf = new SimpleDateFormat("MMMM");
                 but.setText(sdf.format(dt));

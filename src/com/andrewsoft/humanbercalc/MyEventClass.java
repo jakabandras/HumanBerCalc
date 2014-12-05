@@ -95,7 +95,7 @@ public class MyEventClass
       if (dtStart.getMonth() == month) tmpEvents.add(mEvent);
     }
     
-    return tmpEvents;
+    return listEvents;
   }
   
   
