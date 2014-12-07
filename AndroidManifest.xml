@@ -25,7 +25,7 @@
         
         <activity
             android:name=".SettingsActivity" 
-            android:label="Beállítások"
+            android:label="Beállítások">
         </activity>
     </application>
 

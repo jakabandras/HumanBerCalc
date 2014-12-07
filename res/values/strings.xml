@@ -21,5 +21,8 @@
     <string name="txtSzab">Szabadság :</string>
     <string name="txtFizUnn">Fizetett ünnep :</string>
     <string name="txtAktHonap">Aktuális hónap :</string>
+    <string name="txtSettings">Beállítások</string>
+    <string name="txtSave">Mentés</string>
+    <string name="txtExit">Kilépés</string>
 
 </resources>
