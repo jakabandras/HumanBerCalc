@@ -153,8 +153,17 @@ public class MainActivity extends ActionBarActivity implements
         .setTitle("H�nap kiv�laszt�sa").show();
   }
 
+  @SuppressWarnings("static-access")
   private int Hetvege( long dt )
   {
+    Calendar cal = Calendar.getInstance();
+    cal.setFirstDayOfWeek(cal.MONDAY);
+    Date dat = new Date();
+    dat.setTime(dt);
+    cal.setTime(dat);
+    int dow = cal.get(cal.DAY_OF_WEEK);
+    if (dow == 5) return 2;
+    if (dow == 6) return 3;
     return 1;
   }
 
@@ -167,7 +176,7 @@ public class MainActivity extends ActionBarActivity implements
       MyEventInstance aEvent = events.get(i);
       switch (aEvent.Title)
       {
-      case "8 �ra d�lel�tt":
+      case "8 óra délelőtt":
         if (Hetvege(aEvent.stDate) == 1) // H�tk�znap
         {
           wt.work_8_de = wt.work_8_de + 1;
@@ -176,7 +185,7 @@ public class MainActivity extends ActionBarActivity implements
           wt.work_8_szo = wt.work_8_szo + 1;
         } else wt.work_8_va = wt.work_8_va + 1;
         break;
-      case "8 �ra d�lut�n":
+      case "8 óra délután":
         if (Hetvege(aEvent.stDate) == 1) // H�tk�znap
         {
           wt.work_8_du = wt.work_8_du + 1;
@@ -185,7 +194,7 @@ public class MainActivity extends ActionBarActivity implements
           wt.work_8_szo = wt.work_8_szo + 1;
         } else wt.work_8_va = wt.work_8_va + 1;
         break;
-      case "8 �ra �jszaka":
+      case "8 óra éjszaka":
         if (Hetvege(aEvent.stDate) == 1) // H�tk�znap
         {
           wt.work_8_ej = wt.work_8_ej + 1;
@@ -194,7 +203,7 @@ public class MainActivity extends ActionBarActivity implements
           wt.work_8_szo = wt.work_8_szo + 1;
         } else wt.work_8_va = wt.work_8_va + 1;
         break;
-      case "12 �ra nappal":
+      case "12 óra nappal":
         if (Hetvege(aEvent.stDate) == 1) // H�tk�znap
         {
           wt.work_12_na = wt.work_12_na + 1;
@@ -203,7 +212,7 @@ public class MainActivity extends ActionBarActivity implements
           wt.work_12_szo = wt.work_12_szo + 1;
         } else wt.work_12_va = wt.work_12_va + 1;
         break;
-      case "12 �ra �jszaka":
+      case "12 óra éjszaka":
         if (Hetvege(aEvent.stDate) == 1) // H�tk�znap
         {
           wt.work_12_ej = wt.work_12_ej + 1;
@@ -212,10 +221,10 @@ public class MainActivity extends ActionBarActivity implements
           wt.work_12_szo = wt.work_12_szo + 1;
         } else wt.work_12_va = wt.work_12_va + 1;
         break;
-      case "Szabads�g":
+      case "Szabadság":
         wt.work_szabi = wt.work_szabi + 1;
         break;
-      case "Fiz.�nn.":
+      case "Fiz.ünn.":
         wt.work_fiz_unn = wt.work_fiz_unn + 1;
         break;
       }
