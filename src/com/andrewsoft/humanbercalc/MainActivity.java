@@ -150,7 +150,7 @@ public class MainActivity extends ActionBarActivity implements
     lv.setOnItemClickListener(new OnItemClickListenerListViewItem());
 
     AlertDialogStores = new AlertDialog.Builder(context).setView(lv)
-        .setTitle("H�nap kiv�laszt�sa").show();
+        .setTitle("Hónap kiválasztása").show();
   }
 
   @SuppressWarnings("static-access")
