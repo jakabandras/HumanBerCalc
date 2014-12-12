@@ -64,6 +64,11 @@ public class MyEventClass
     cur.moveToFirst();
     int cnt = cur.getCount();
     String[] col_names = cur.getColumnNames();
+    /*
+     * TODO: Ellenőrizni, hogy az esemény id-je megegyezik-e az előzővel, ha
+     * igen az eseményt úgy hozzáadni a listához, hogy a kezdő- és végdátumot
+     * megnöveljük 1 nappal
+     */
     cur.moveToFirst();
     for (int i = 0; i < cnt; i++)
     {
@@ -75,6 +80,9 @@ public class MyEventClass
       {
         MyEventInstance mEvent = new MyEventInstance();
         mEvent.Title = ttl;
+        // Cursor cur2 = CalendarContract.Instances.
+        mEvent.stDate = cur.getLong(3);
+        mEvent.enDate = cur.getLong(4);
 
         listEvents.add(mEvent);
       }

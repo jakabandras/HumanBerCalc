@@ -17,9 +17,12 @@ public class SettingsActivity extends Activity
   /**
    * 
    */
+  private MyConfig mycfg;
+
   public SettingsActivity( )
   {
     // TODO Auto-generated constructor stub
+    setMycfg(new MyConfig(this.getBaseContext()));
   }
 
   @Override
@@ -35,5 +38,22 @@ public class SettingsActivity extends Activity
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.settings_menu, menu);
     return true;
+  }
+
+  /**
+   * @return the mycfg
+   */
+  public MyConfig getMycfg( )
+  {
+    return mycfg;
+  }
+
+  /**
+   * @param mycfg
+   *          the mycfg to set
+   */
+  private void setMycfg( MyConfig mycfg )
+  {
+    this.mycfg = mycfg;
   }
 }

@@ -158,12 +158,14 @@ public class MainActivity extends ActionBarActivity implements
   {
     Calendar cal = Calendar.getInstance();
     cal.setFirstDayOfWeek(cal.MONDAY);
+    SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
     Date dat = new Date();
     dat.setTime(dt);
     cal.setTime(dat);
+    String strDate = sdf.format(dat);
     int dow = cal.get(cal.DAY_OF_WEEK);
-    if (dow == 5) return 2;
-    if (dow == 6) return 3;
+    if (strDate == "szombat") return 2;
+    if (strDate == "vasárnap") return 3;
     return 1;
   }
 

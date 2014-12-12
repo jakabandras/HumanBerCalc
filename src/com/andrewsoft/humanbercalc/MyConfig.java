@@ -89,6 +89,17 @@ public class MyConfig
   {
     // TODO Auto-generated method stub
     MyConfig cfg = ser.read(MyConfig.class, config_file);
+    this.ber_12_ej = cfg.ber_12_ej;
+    this.ber_12_na = cfg.ber_12_na;
+    this.ber_12_szo = cfg.ber_12_szo;
+    this.ber_12_va = cfg.ber_12_va;
+    this.ber_8_de = cfg.ber_8_de;
+    this.ber_8_du = cfg.ber_8_du;
+    this.ber_8_ej = cfg.ber_8_ej;
+    this.ber_8_szo = cfg.ber_8_szo;
+    this.ber_8_va = cfg.ber_8_va;
+    this.ber_fiz_unn = cfg.ber_fiz_unn;
+    this.ber_szabi = cfg.ber_szabi;
   }
 
 }
