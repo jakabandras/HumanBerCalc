@@ -17,12 +17,13 @@ public class SettingsActivity extends Activity
   /**
    * 
    */
-  private MyConfig mycfg;
+  private MyConfig mycfg = null;
 
   public SettingsActivity( )
   {
     // TODO Auto-generated constructor stub
-    setMycfg(new MyConfig(this.getBaseContext()));
+    MyConfig cfg = new MyConfig(this.getParent().getBaseContext());
+    setMycfg(cfg);
   }
 
   @Override
@@ -30,6 +31,12 @@ public class SettingsActivity extends Activity
   {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.settings);
+    if (mycfg == null)
+    {
+      MyConfig cfg = new MyConfig(this.getApplicationContext());
+      setMycfg(cfg);
+    }
+
   }
 
   @Override

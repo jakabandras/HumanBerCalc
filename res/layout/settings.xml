@@ -36,7 +36,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText1"
+					android:id="@+id/edit8de"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight="1"
@@ -60,7 +60,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText2"
+					android:id="@+id/edit8du"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:ems="10"
@@ -79,7 +79,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText3"
+					android:id="@+id/edit8ej"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight="1"
@@ -99,7 +99,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText4"
+					android:id="@+id/edit8szo"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight="1"
@@ -119,7 +119,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText5"
+					android:id="@+id/edit8va"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight="1"
@@ -139,7 +139,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText6"
+					android:id="@+id/edit12na"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight="1"
@@ -159,7 +159,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText7"
+					android:id="@+id/edit12ej"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight="1"
@@ -179,7 +179,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText8"
+					android:id="@+id/edit12szo"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight="1"
@@ -199,7 +199,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText9"
+					android:id="@+id/edit12va"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight="1"
@@ -219,7 +219,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText10"
+					android:id="@+id/editSzabi"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight="1"
@@ -239,7 +239,7 @@
 					android:textAppearance="?android:attr/textAppearanceMedium" />
 
 				<EditText
-					android:id="@+id/editText11"
+					android:id="@+id/editFizUnn"
 					android:layout_width="0dp"
 					android:layout_height="wrap_content"
 					android:layout_weight="1"

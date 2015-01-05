@@ -54,7 +54,7 @@ public class MyEventClass
     cal2.set(Calendar.DAY_OF_MONTH, 1);
     // CalendarService.readCalendar(mContext);
     Cursor cur = CalendarContract.Instances.query(resolver, (new String[]
-      { "_id", "title", "description", "dtstart", "dtend" }),
+      { "event_id", "title", "description", "begin", "dtend" }),
         cal1.getTimeInMillis(), cal2.getTimeInMillis());
 
     // Cursor cur =
@@ -70,6 +70,7 @@ public class MyEventClass
      * megnöveljük 1 nappal
      */
     cur.moveToFirst();
+    long my_id = 0;
     for (int i = 0; i < cnt; i++)
     {
       String ttl = cur.getString(1);

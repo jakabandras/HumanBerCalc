@@ -10,6 +10,8 @@ import org.simpleframework.xml.core.Persister;
 
 //import android.app.Activity;
 import android.content.Context;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Environment;
 
 /**
  * @author Andrew
@@ -54,10 +56,18 @@ public class MyConfig
   {
     // TODO Auto-generated constructor stub
     mycontext = context;
-    File my_dir = context.getExternalFilesDir(null);
-    String my_dir_str = my_dir.getAbsolutePath();
-    String my_file = my_dir_str + "/" + "MyConfig.xml";
-    config_file = new File(my_file);
+    String s = "";
+    try
+    {
+      s = context.getPackageManager().getPackageInfo(context.getPackageName(),
+          0).applicationInfo.dataDir;
+    }
+    catch (NameNotFoundException e2)
+    {
+      // TODO Auto-generated catch block
+      e2.printStackTrace();
+    }
+    config_file = new File(s + "/MyConfig.xml");
     ser = new Persister();
     if (config_file.exists()) try
     {
