@@ -7,6 +7,8 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -114,7 +116,20 @@ public class MainActivity extends ActionBarActivity implements
 
     if (id == R.id.action_settings)
     {
+      PackageManager pm = this.getPackageManager();
+      String mypath = "";
+      try
+      {
+        mypath = pm.getPackageInfo(getPackageName(), 0).applicationInfo.dataDir;
+      }
+      catch (NameNotFoundException e)
+      {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+
       Intent myIntent = new Intent(this, SettingsActivity.class);
+      myIntent.putExtra("DataPath", mypath);
       startActivity(myIntent);
       return true;
     }

@@ -25,49 +25,43 @@ public class MyConfig
   /**
    * 
    */
-  private final Context    mycontext;
-  private final Serializer ser;
-  private final File       config_file;
+  // private final Context mycontext;
+  private Serializer ser;
+  private File       config_file;
 
   @Element
-  public int               ber_8_de    = 1;
+  public int         ber_8_de    = 1;
   @Element
-  public int               ber_8_du    = 1;
+  public int         ber_8_du    = 1;
   @Element
-  public int               ber_8_ej    = 1;
+  public int         ber_8_ej    = 1;
   @Element
-  public int               ber_8_szo   = 1;
+  public int         ber_8_szo   = 1;
   @Element
-  public int               ber_8_va    = 1;
+  public int         ber_8_va    = 1;
   @Element
-  public int               ber_12_na   = 1;
+  public int         ber_12_na   = 1;
   @Element
-  public int               ber_12_ej   = 1;
+  public int         ber_12_ej   = 1;
   @Element
-  public int               ber_12_szo  = 1;
+  public int         ber_12_szo  = 1;
   @Element
-  public int               ber_12_va   = 1;
+  public int         ber_12_va   = 1;
   @Element
-  public int               ber_szabi   = 1;
+  public int         ber_szabi   = 1;
   @Element
-  public int               ber_fiz_unn = 1;
+  public int         ber_fiz_unn = 1;
 
-  public MyConfig( Context context )
+  public MyConfig( )
+  {
+
+  }
+
+  public MyConfig( String xmlPath )
   {
     // TODO Auto-generated constructor stub
-    mycontext = context;
     String s = "";
-    try
-    {
-      s = context.getPackageManager().getPackageInfo(context.getPackageName(),
-          0).applicationInfo.dataDir;
-    }
-    catch (NameNotFoundException e2)
-    {
-      // TODO Auto-generated catch block
-      e2.printStackTrace();
-    }
-    config_file = new File(s + "/MyConfig.xml");
+    config_file = new File(xmlPath + "/MyConfig.xml");
     ser = new Persister();
     if (config_file.exists()) try
     {
@@ -93,6 +87,11 @@ public class MyConfig
   {
     // TODO Auto-generated method stub
     ser.write(this, config_file);
+  }
+
+  public void saveConfig( ) throws Exception
+  {
+    def_config();
   }
 
   private void read_config( ) throws Exception
