@@ -46,6 +46,12 @@ public class MyEventClass
     resolver = mContext.getContentResolver();
     Calendar cal1 = Calendar.getInstance();
     Calendar cal2 = Calendar.getInstance();
+    Calendar cal3 = Calendar.getInstance();
+    if (cal3.getTime().getMonth() < ((MainActivity) mContext).actMonth)
+    {
+      cal1.set(Calendar.YEAR, cal3.getTime().getYear() - 1);
+      cal2.set(Calendar.YEAR, cal3.getTime().getYear() - 1);
+    }
 
     cal1.set(Calendar.MONTH, ((MainActivity) mContext).actMonth);
     cal1.set(Calendar.DAY_OF_MONTH, 1);

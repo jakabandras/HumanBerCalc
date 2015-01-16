@@ -1,17 +1,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.andrewsoft.humanbercalc.MainActivity" >
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	tools:context="com.andrewsoft.humanbercalc.MainActivity" >
 
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
-    <item 
-        android:id="@+id/action_exit" 
-        android:title="@string/mnuExit"
-        android:orderInCategory="110"/>
-    
+	<item
+		android:id="@+id/action_settings"
+		android:orderInCategory="100"
+		android:title="@string/action_settings"
+		app:showAsAction="never"/>
+	<item
+		android:id="@+id/newSettings"
+		android:orderInCategory="110"
+		android:title="Új beállítás">
+	</item>
+	<item
+		android:id="@+id/action_exit"
+		android:orderInCategory="120"
+		android:title="@string/mnuExit"/>
 
 </menu>

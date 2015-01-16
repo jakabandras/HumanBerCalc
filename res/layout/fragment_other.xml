@@ -1,8 +1,391 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/scrv1"
+	android:layout_width="match_parent"
+	android:layout_height="fill_parent"
+	android:fillViewport="true" >
 
-</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="fill_parent"
+		android:gravity="left"
+		android:orientation="vertical" >
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center" >
+
+			<TextView
+				android:id="@+id/textView1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/txtHaviOssz"
+				android:textAppearance="?android:attr/textAppearanceLarge" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<Space
+				android:layout_width="wrap_content"
+				android:layout_height="50dp" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:paddingBottom="2dp" >
+
+			<TextView
+				android:id="@+id/textView2"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="Műszak"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/textView3"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right"
+				android:gravity="right"
+				android:text="Nap"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/textView4"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="Bér"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:textStyle="bold" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/textView5"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txt8de" />
+
+			<TextView
+				android:id="@+id/textNap8de"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBer8de"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/TextView03"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txt8du" />
+
+			<TextView
+				android:id="@+id/textNap8du"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBer8du"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/TextView04"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txt8ej" />
+
+			<TextView
+				android:id="@+id/textNap8ej"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBer8ej"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/TextView07"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txt8szo" />
+
+			<TextView
+				android:id="@+id/textNap8szo"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBer8szo"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/TextView11"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txt8va" />
+
+			<TextView
+				android:id="@+id/textNap8va"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBer8va"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="5dp" >
+
+			<TextView
+				android:id="@+id/TextView13"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txt12na" />
+
+			<TextView
+				android:id="@+id/textNap12na"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBer12na"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/TextView18"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txt12ej" />
+
+			<TextView
+				android:id="@+id/textNap12ej"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBer12ej"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/TextView19"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txt12szo" />
+
+			<TextView
+				android:id="@+id/textNap12szo"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBer12szo"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/TextView24"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txt12Va" />
+
+			<TextView
+				android:id="@+id/textNap12va"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBer12va"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="5dp" >
+
+			<TextView
+				android:id="@+id/TextView26"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txtFizUnn" />
+
+			<TextView
+				android:id="@+id/textNapUnn"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBerUnn"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<TextView
+				android:id="@+id/TextView28"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txtSzab" />
+
+			<TextView
+				android:id="@+id/textNapSzab"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:text="0" />
+
+			<TextView
+				android:id="@+id/textBerSzab"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0" />
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="15dp" >
+
+			<TextView
+				android:id="@+id/TextView33"
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:text="@string/txtOsszesen"
+				android:textStyle="bold"
+				android:typeface="serif" />
+
+			<TextView
+				android:id="@+id/TextView32"
+				android:layout_width="50dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:typeface="serif" />
+
+			<TextView
+				android:id="@+id/texBerOsszesen"
+				android:layout_width="120dp"
+				android:layout_height="wrap_content"
+				android:gravity="right"
+				android:paddingRight="5dp"
+				android:text="0"
+				android:textStyle="bold"
+				android:typeface="serif" />
+		</LinearLayout>
+	</LinearLayout>
+
+</ScrollView>

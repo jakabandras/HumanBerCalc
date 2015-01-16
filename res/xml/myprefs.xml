@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<PreferenceCategory android:title="8 órás műszak" >
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber8de"
+			android:title="8 óra délelőtt :" />
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber8du"
+			android:title="8 óra délután :" />
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber8ej"
+			android:title="8 óra éjszaka :" />
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber8szo"
+			android:title="8 óra szombaton :" />
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber8va"
+			android:title="8 óra délután :" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="12 órás műszak" >
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber12na"
+			android:title="12 óra nappal :" />
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber12ej"
+			android:title="12 óra éjszaka :" />
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber12szo"
+			android:title="12 óra szombaton :" />
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber12va"
+			android:title="12 óra vasárnap :" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Egyéb" >
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber_szabi"
+			android:title="Szabadság :" />
+		<EditTextPreference
+			android:defaultValue="1"
+			android:key="ber_fiz_unn"
+			android:title="Fizetett ünnep :" />
+	</PreferenceCategory>
+
+</PreferenceScreen>
