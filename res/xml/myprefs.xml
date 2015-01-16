@@ -21,7 +21,7 @@
 		<EditTextPreference
 			android:defaultValue="1"
 			android:key="ber8va"
-			android:title="8 óra délután :" />
+			android:title="8 óra vasárnap :" />
 	</PreferenceCategory>
 	<PreferenceCategory android:title="12 órás műszak" >
 		<EditTextPreference
