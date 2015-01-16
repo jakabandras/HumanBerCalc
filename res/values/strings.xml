@@ -28,5 +28,9 @@
 	<string name="txtOraszam">Óraszám : </string>
 	<string name="txtBer">Órabér össz. : </string>
 	<string name="txtOsszesen">Összesen : </string>
+	<string name="toast_pref_ures">Nem lehet üres! Adj meg valami értéket.</string>
+	<string name="toast_pref_hibas">NYOMORÉK! Csak szám lehet!</string>
+	<string name="toast_pref_nulla">Ingyen akarsz dolgozni??? Te tudod&#8230;)</string>
+	<string name="toast_pref_minusz">Te fizetsz azért, hogy dolgozhass? Megérdemled!</string>
 
 </resources>
