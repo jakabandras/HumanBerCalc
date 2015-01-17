@@ -50,6 +50,7 @@ public class NewSettingsActivity extends PreferenceActivity implements
           Toast.LENGTH_SHORT);
       toast.show();
       RollBack(sharedPreferences, key);
+      return;
     }
     Integer mTmp = 0;
     try
@@ -62,6 +63,7 @@ public class NewSettingsActivity extends PreferenceActivity implements
           Toast.LENGTH_SHORT);
       toast.show();
       RollBack(sharedPreferences, key);
+      return;
     }
     if (mTmp == 0)
     {
@@ -69,6 +71,7 @@ public class NewSettingsActivity extends PreferenceActivity implements
           Toast.LENGTH_SHORT);
       toast.show();
       RollBack(sharedPreferences, key);
+      return;
     }
     if (mTmp < 0)
     {
